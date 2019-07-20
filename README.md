@@ -1,3 +1,12 @@
+
+#To run this extension
+    1.npm install -g yo generator-code
+    2.Run debugger
+    3.Enjoy coding and make changes in extension.js (Line Number 24)
+
+
+
+
 # cocodevs README
 
 This is the README for your extension "cocodevs". After writing up a brief description, we recommend including the following sections.
