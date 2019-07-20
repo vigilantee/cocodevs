@@ -26,10 +26,14 @@ function activate(context) {
 		 */
 
 		const name='testing';
-		const url='http://test.com/new/asd/'
+		const url='http://test.com/new/asd/';
+		const title='Node Help';
+		const description='Need help in my node and react project with node v8';
 		const postData = {
 			name: name,
-			url: url
+			url: url,
+			title: title,
+			description: description
 		};
 		// @ts-ignore
 		const postQuery = fetch('http://www.fspot.in/api/v1/cocodevs/post', {
