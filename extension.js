@@ -1,7 +1,7 @@
 // The module 'vscode' contains the VS Code extensibility API
 // Import the module and reference it with the alias vscode in your code below
 const vscode = require('vscode');
-
+const fetch = require('cross-fetch');
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
 
@@ -24,6 +24,24 @@ function activate(context) {
 		/**
 		 * Make Api Calls Here
 		 */
+
+		const name='testing';
+		const url='http://test.com/new/asd/'
+		const postData = {
+			name: name,
+			url: url
+		};
+		// @ts-ignore
+		const postQuery = fetch('http://www.fspot.in/api/v1/cocodevs/post', {
+			method: 'POST',
+			headers: {
+				'Accept': 'application/json',
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify(postData)
+		})
+		.then(response => response.json())
+		.then(response => console.log("response is from post fetch", response))
 		vscode.window.showInformationMessage('Hello World!');
 	});
 
